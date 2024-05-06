@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import emoji
 
 
-path = "C:/Users/samca/PycharmProjects/Capobianco-Final_Project/open_pubs_10000_sample.csv
+path = "open_pubs_10000_sample.csv"
 
 df_pubs = pd.read_csv(path)
 df_pubs.rename(columns={"latitude":"lat", "longitude": "lon"}, inplace= True)

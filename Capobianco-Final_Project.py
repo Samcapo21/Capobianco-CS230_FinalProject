@@ -11,12 +11,19 @@ pub culture.
 """
 
 import streamlit as st
+import os
 import pydeck as pdk
 import pandas as pd
 import matplotlib.pyplot as plt
 import emoji
 
-path = "C:/Users/samca/PycharmProjects/Capobianco-Final_Project/open_pubs_10000_sample.csv"
+
+# Get the path to the current script's directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the relative path to the 'data' folder
+data_path = os.path.join(script_dir, "open_pubs_10000_sample.csv"")
+df = pd.read_csv(data_path)
 
 df_pubs = pd.read_csv(path)
 df_pubs.rename(columns={"latitude":"lat", "longitude": "lon"}, inplace= True)

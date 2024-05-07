@@ -154,7 +154,7 @@ if selected_tab == "Pub Density":
 
     # Prompts user to input a town and returns how many pubs in that town [ST1]
     user_town = st.text_input("Please enter a town in England")
-    if user_town:
+    if user_town in town_list:
         selected_town = user_cities(town_series, user_town)
         st.write(f"{user_town} has {selected_town} pubs!")
     else:
